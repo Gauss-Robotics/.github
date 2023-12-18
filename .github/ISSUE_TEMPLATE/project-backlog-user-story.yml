@@ -1,0 +1,52 @@
+name: 📋 User story
+description: User story to be added to our project backlog
+title: "<Title>"
+projects: ["Gauss-Robotics/8"]
+# labels: ["Bug", "Needs Triage"]
+body:
+- type: textarea
+  attributes:
+    label: User story
+    description: |
+       examples:
+       As a \<role\> I like to have \<capability\>, so that
+       - benefit 1
+       - benefit 2
+       - ...
+       
+       As a \<role\> I can \<capability\>, so that \<receive benefit\>
+       In order to \<receive benefit\> as a \<role\>, I can \<goal/desire\>
+       As \<who\> \<when\> \<where\>, I want \<what\> because \<why\>
+    value: As a
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Description
+    description: A concise description about your item, together with subtasks if applicable
+    placeholder: |
+       We will do such and such, brokendown into
+       - [ ] Subtask A
+       - [ ] Subtask B
+       - [ ] Subtask C
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Deliverables/Definition of done/Smart goal
+    placeholder: |
+       - [ ] A
+       - [ ] B       
+  validations:
+    required: true
+- type: dropdown
+  attributes:
+    label: Type
+    description: Is this an issue or an epic?
+    multiple: false
+    options:
+      - Issue
+      - Epic
+    default: 0
+  validations:
+    required: true
