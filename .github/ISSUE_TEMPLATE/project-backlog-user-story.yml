@@ -46,7 +46,7 @@ body:
     multiple: false
     options:
       - Issue
-      - Epic
+      - EPIC
     default: 0
   validations:
     required: true
