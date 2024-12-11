@@ -22,31 +22,20 @@ body:
     required: true
 - type: textarea
   attributes:
-    label: Description
-    description: A concise description about your item, together with subtasks if applicable
-    placeholder: |
-       We will do such and such, brokendown into
-       - [ ] Subtask A
-       - [ ] Subtask B
-       - [ ] Subtask C
+    label: Acceptance criteria
+    description: Criteria to be met before you accept the issue as fulfilled 
+    placeholder: |       
+       - [ ] User can...
+       - [ ] I am able to...
+       - [ ] ...
   validations:
-    required: false
+    required: true
 - type: textarea
   attributes:
-    label: Deliverables/Definition of done/Smart goal
+    label: Description
+    description: OPTIONALLY add further context and information, or tasks you think might be relevant
     placeholder: |
        - [ ] A
        - [ ] B       
   validations:
-    required: true
-- type: dropdown
-  attributes:
-    label: Type
-    description: Is this an issue or an epic?
-    multiple: false
-    options:
-      - Issue
-      - EPIC
-    default: 0
-  validations:
-    required: true
+    required: false
