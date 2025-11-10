@@ -1,0 +1,88 @@
+name: Being a QA Engineer for a day
+description: Help the other team to test their product by being a QA engineer for one day.
+title: Being a QA-Engineer for a day
+type: QA Testing 🧐
+projects: ["Gauss-Robotics/8"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Each sprint, one person from each team acts as a **QA Engineer** for the *other*
+        team's product (Gauss.Chat ↔ Gauss.OS).
+
+        Spend **one day** using it to solve a *real* task, explore workflows, and
+        document your observations here.
+
+        Please do it **at the beginning of the sprint** such that there is enough time
+        for your bug reports and feature request to potentially make it to the very next
+        sprint.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: 🎯 Goal
+      description: Describe what you tried to do using the product.
+      value: |
+        > Describe what you tried to do using the product.
+        > (Example: “Tried to create a new simulation setup in Gauss.OS” or “Used Gauss.Chat to generate a launch script.”)
+
+        - ...
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-worked
+    attributes:
+      label: ✅ What Worked Well
+      description: List anything that felt smooth, intuitive, or surprisingly good.
+      value: |
+        > List anything that felt smooth, intuitive, or surprisingly good.
+
+        - ...
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: bugs
+    attributes:
+      label: 🐞 Bugs / Friction Points
+      description: List bugs, unclear UI flows, or moments where you got stuck.
+      value: |
+        > List bugs, unclear UI flows, or moments where you got stuck.
+        > Include links, screenshots, or short reproduction steps if possible.
+
+        - ...
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: improvements
+    attributes:
+      label: 💡 Suggestions / Improvement Ideas
+      description: What could make the product easier or more enjoyable to use?
+      value: |
+        > What could make the product easier or more enjoyable to use?
+
+        - ...
+        - ...
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Acceptance criteria
+
+        - [ ] I’ve informed the other team of critical bugs
+        - [ ] Added important findings to their backlog or linked issues
+        - [ ] Shared highlights in the next sprint review
+        - [ ] I have created a new instance of this issue and assigned it already to the next sprint
+
+        ---
+
+        🗓️ *This issue will serve as the record of your “QA Engineer of the Day” activity for this sprint. Thank you for helping make our products better!*
+
