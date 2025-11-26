@@ -5,8 +5,9 @@ type: QA Testing 🧐
 projects: ["Gauss-Robotics/8"]
 
 body:
-  - type: markdown
+  - type: textarea
     attributes:
+      label: Introduction
       value: |
         Each sprint, one person from each team acts as a **QA Engineer** for the *other*
         team's product (Gauss.Chat ↔ Gauss.OS).
@@ -22,7 +23,6 @@ body:
     id: goal
     attributes:
       label: 🎯 Goal
-      description: Describe what you tried to do using the product.
       value: |
         > Describe what you tried to do using the product.
         > (Example: “Tried to create a new simulation setup in Gauss.OS” or “Used Gauss.Chat to generate a launch script.”)
@@ -36,7 +36,6 @@ body:
     id: what-worked
     attributes:
       label: ✅ What Worked Well
-      description: List anything that felt smooth, intuitive, or surprisingly good.
       value: |
         > List anything that felt smooth, intuitive, or surprisingly good.
 
@@ -49,7 +48,6 @@ body:
     id: bugs
     attributes:
       label: 🐞 Bugs / Friction Points
-      description: List bugs, unclear UI flows, or moments where you got stuck.
       value: |
         > List bugs, unclear UI flows, or moments where you got stuck.
         > Include links, screenshots, or short reproduction steps if possible.
@@ -63,7 +61,6 @@ body:
     id: improvements
     attributes:
       label: 💡 Suggestions / Improvement Ideas
-      description: What could make the product easier or more enjoyable to use?
       value: |
         > What could make the product easier or more enjoyable to use?
 
@@ -72,11 +69,11 @@ body:
     validations:
       required: false
 
-  - type: markdown
+  - type: textarea
+    id: acceptance-criteria
     attributes:
+      label: ✅ Acceptance Criteria
       value: |
-        ### Acceptance criteria
-
         - [ ] I’ve informed the other team of critical bugs
         - [ ] Added important findings to their backlog or linked issues
         - [ ] Shared highlights in the next sprint review
