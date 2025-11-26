@@ -77,7 +77,7 @@ body:
         - [ ] I’ve informed the other team of critical bugs
         - [ ] Added important findings to their backlog or linked issues
         - [ ] Shared highlights in the next sprint review
-        - [ ] I have created a new instance of this issue and assigned it already to the next sprint
+        - [ ] Created a new instance of this issue (see issue template) and assigned it to next sprint
 
         ---
 
