@@ -1,0 +1,138 @@
+name: 🚀 Release Process
+description: Checklist for preparing and performing a Gauss.Chat release.
+title: "Gauss.Chat <month> <year> Release"
+projects: ["Gauss-Robotics/8"]
+
+body:
+  - type: input
+  - id: target_date
+    attributes:
+      label: 🎯 Target date
+      description: Please enter the targeted release date
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: microservices
+    multiple: true
+    attributes:
+      label: 💻 Microservices to be included
+      options:
+        - agentic-system
+        - asset-manager
+        - chat-frontend
+        - chat-session-manager 
+        - chat-session-templates
+        - code-context-store
+        - infinity
+        - robogym-resource-manager
+        - robogym-session-manager
+    validations:
+      required: true
+
+  - type: textarea
+    id: open-prs
+    attributes:
+      label: 📦 PRs to be merged before release
+      value: |
+        ## Features / Improvements
+        - [ ] []()
+
+        ## Bug Fixes
+        - [ ] [chat-frontend vulnerabilities fix (`pnpm audit`)]()
+    validations:
+      required: false
+
+  - type: textarea
+    id: pre-release
+    attributes:
+      label: 🧪 Pre-Release Activities
+      value: |
+        ### 1. Prepare codebase & configuration (4 days ahead)
+        - [ ] Merge PRs (see above)
+        - [ ] Decide on feature set for stages
+        - [ ] Create configuration (env variables) for stages
+        - [ ] Deploy to staging stages
+
+        ### 2. Testing (3 days ahead)
+        - [ ] Manual pre-release testing (according to our manual tests)
+        - [ ] Run smoke tests on staging
+
+        ### 3. Fix and merge bugfixes
+        - [ ] Fix and merge bugs found in testing stage
+
+        ### 4. Final fixes & preparations
+        - [ ] Create DB backups
+        - [ ] Copy Dbs to release stages
+
+        ### 5. Changelogs
+        - [ ] Create & merge changelog & version bump PRs for individual services
+          - [ ] agentic-system
+          - [ ] asset-manager
+          - [ ] chat-frontend
+          - [ ] chat-session-manager 
+          - [ ] chat-session-templates
+          - [ ] code-context-store
+          - [ ] infinity
+          - [ ] robogym-resource-manager
+          - [ ] robogym-session-manager
+        - [ ] Create overall changelog
+
+    validations:
+      required: false
+
+  - type: textarea
+    id: release
+    attributes:
+      label: 🚀 Release Activities
+      value: |
+        ### Configuration
+        - [ ] Update Langfuse prompts
+
+        ### Create Stable releases via Github (all services)
+        - [ ] agentic-system
+        - [ ] asset-manager
+        - [ ] chat-frontend
+        - [ ] chat-session-manager 
+        - [ ] chat-session-templates
+        - [ ] code-context-store
+        - [ ] infinity
+        - [ ] robogym-resource-manager
+        - [ ] robogym-session-manager
+
+        ### Additional deployment actions
+        - [ ] Deploy all services to demo space
+        - [ ] Deploy all services to nova space
+        - [ ] Deploy all services to stable space
+        - [ ] Upload/update template sessions to both spaces
+        - [ ] Upload reset routine code to edge-white and edge-red
+    validations:
+      required: false
+
+  - type: textarea
+    id: post-release
+    attributes:
+      label: 🔍 Post-Release Activities
+      value: |
+        ### Final testing
+        - [ ] Manual post-release testing
+        - [ ] Run smoke tests against released stages
+
+        ```
+        ### Communication
+        - [ ] Announcement in chat space
+        - [ ] Announcement to the team including changelog
+        - [ ] Small session with Jochen (demo, testing, discussion of DOs and DON'Ts)
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 📝 Notes / Incidents
+      description: Document problems, rollbacks, or delays during the release process.
+      placeholder: ""
+    validations:
+      required: false
